@@ -84,6 +84,13 @@ gulp.task('files:dev', function () {
 		.pipe(gulp.dest('./build/files/'));
 });
 
+gulp.task('php:dev', function () {
+	return gulp
+		.src('./src/*.php')
+		.pipe(changed('./build/'))
+		.pipe(gulp.dest('./build/'));
+});
+
 gulp.task('js:dev', function () {
 	return gulp
 		.src('./src/js/*.js')
